@@ -1,0 +1,48 @@
+package com.example.opportunity;
+
+import com.example.opportunity.Entity.Permissions;
+import com.example.opportunity.Entity.ProductLine;
+import com.example.opportunity.Service.PermissionsServiceImpl;
+import com.example.opportunity.Service.ProductLineServiceImpl;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.jupiter.api.Order;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import java.text.ParseException;
+import java.util.List;
+
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class ProductLineTest {
+
+    @Autowired
+    ProductLineServiceImpl productLineService;
+
+
+    @Test
+    @Order(1)
+    public void testAddDepartement() throws ParseException {
+        String n = "ProductTest";
+        ProductLine c = new ProductLine(1L, n);
+        ProductLine LineAdded = productLineService.addProductLine(c);
+        Assert.assertEquals(c.getName(), LineAdded.getName());
+    }
+
+    @Test
+    @Order(2)
+    public void testListBusinessUnits() {
+        List<ProductLine> listsProducts = productLineService.ListAllProducts();
+        boolean test = false;
+        if (listsProducts.size() > 0) {
+            test = true;
+        }
+        Assert.assertTrue(test);
+    }
+
+
+}

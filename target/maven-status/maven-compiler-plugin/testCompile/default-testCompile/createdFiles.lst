@@ -1,0 +1,10 @@
+com/example/opportunity/BusinessUnitTest.class
+com/example/opportunity/CustomerTest.class
+com/example/opportunity/GeographyTest.class
+com/example/opportunity/PermissionsTest.class
+com/example/opportunity/DepartementTest.class
+com/example/opportunity/OpportunityApplicationTests.class
+com/example/opportunity/ProductLineTest.class
+com/example/opportunity/BusinessLineTest.class
+com/example/opportunity/CurrenciesTest.class
+com/example/opportunity/RolesTest.class
