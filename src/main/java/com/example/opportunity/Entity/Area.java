@@ -20,7 +20,7 @@ public class Area {
 
     private boolean status=true;
 
-    @OneToMany(mappedBy = "areas",fetch= FetchType.LAZY,cascade = {CascadeType.PERSIST, CascadeType.MERGE} ,orphanRemoval = true)
+    @OneToMany(fetch= FetchType.LAZY,cascade = {CascadeType.PERSIST, CascadeType.MERGE} ,orphanRemoval = true)
     private List<Geography> GeographyList;
 
     //@ManyToMany(fetch= FetchType.LAZY)

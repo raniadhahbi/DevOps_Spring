@@ -23,7 +23,7 @@ public class Geography {
 
     private boolean status=true;
 
-    @OneToMany(mappedBy = "geographies" ,fetch=FetchType.LAZY,cascade = {CascadeType.PERSIST, CascadeType.MERGE} ,orphanRemoval = true)
+    @OneToMany(fetch=FetchType.LAZY,cascade = {CascadeType.PERSIST, CascadeType.MERGE} ,orphanRemoval = true)
     private List<Customer> customer;
 
 
